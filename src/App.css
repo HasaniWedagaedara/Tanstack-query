@@ -1,0 +1,15 @@
+.container {
+  background-color: azure;
+  width: 30%;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-top: 10px;
+  justify-content: center;  
+  align-items: center;
+}
+.btn{
+  background-color: rgba(67, 188, 67, 0.779);
+  border-color: rgba(67, 188, 67, 0.779);
+  font-size: 20px;
+  margin-top: 20px;
+}
