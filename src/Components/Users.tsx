@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery} from "@tanstack/react-query";
 import { fetchUsers } from "../api/api";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
@@ -30,6 +30,8 @@ const Users = () => {
   if (isError) {
     return <h2>Error: {error.message}</h2>;
   }
+
+  
 
   return (
     <div>

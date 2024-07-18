@@ -1,6 +1,4 @@
-// src/Components/Form.tsx
-
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { mutateUser } from "../api/api"; 
 import { useNavigate } from "react-router-dom";
@@ -18,6 +16,8 @@ const Form = () => {
     email: "",
   });
 
+  const queryClient = useQueryClient();
+
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -28,6 +28,9 @@ const Form = () => {
   const mutation = useMutation({
     mutationFn: mutateUser,
     onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["User"],
+      });
       navigate('/')
     },
   });

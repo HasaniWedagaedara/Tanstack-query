@@ -41,6 +41,11 @@
       "first_name": "Rachel",
       "last_name": "Howell",
       "avatar": "https://reqres.in/img/faces/12-image.jpg"
+    },
+    {
+      "id": "d7b8",
+      "first_name": "Hasini",
+      "email": "hasaniwedagedara@gmail.com"
     }
   ]
 }
